@@ -4,7 +4,7 @@ export default function Book({ book }) {
     const { bookName, author, image, rating, category, tags ,bookId} = book;
   
     return (
-      <Link to={}>
+      <Link to={`/books/${bookId}`}>
         <div className="max-w-sm p-6 bg-white rounded-2xl shadow-sm border border-[#13131326]">
         {/* Book Image */}
         <div className="flex justify-center items-center bg-gray-100 rounded-lg h-56">
