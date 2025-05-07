@@ -6,10 +6,11 @@ export default function Footer() {
       <aside>
       
       <img src={booklogo} alt="" />
-      <p>
+      <p className=" text-[28px]  font-bold">
         Readora
-        <br />
-        Your gateway to endless stories
+      </p>
+      <p>
+      Your gateway to endless stories
       </p>
       </aside>
       <nav>
