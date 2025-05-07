@@ -1,9 +1,10 @@
+import Hero from "../Hero/Hero";
 
 
 export default function Home() {
   return (
     <div>
-       <h1>This is form HOmes</h1>
+       <Hero></Hero>
     </div>
   )
 }

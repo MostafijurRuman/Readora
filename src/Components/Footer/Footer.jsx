@@ -1,7 +1,7 @@
 import booklogo from'../../assets/book.ico'
 export default function Footer() {
   return (
-    <div className='bg-base-200'>
+    <div className='bg-base-200 mt-14'>
         <footer className="footer sm:footer-horizontal  text-base-content p-10 max-w-screen-4xl mx-auto px-6 md:px-16 lg:px-28">
       <aside>
       
