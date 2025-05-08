@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredReadList } from "../Utility/AddToLoacalDB";
 
 export default function BookDetails() {
   const { bookId } = useParams();
@@ -18,6 +19,9 @@ export default function BookDetails() {
     yearOfPublishing,
   } = book;
 
+  const handelAddtoReadList = (id)=>{
+    addToStoredReadList(id);
+  }
   return (
     <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10 font-worksans text-gray-800">
       {/* Book Image */}
@@ -80,11 +84,11 @@ export default function BookDetails() {
 
         {/* Action Buttons */}
         <div className="mt-6 flex gap-4">
-          <button className="px-6 py-2 border border-gray-600 text-gray-700 rounded-md hover:bg-gray-100 transition-all duration-200">
-            Read
+          <button onClick={()=>handelAddtoReadList(bookId)} className="px-6 py-2 border border-gray-600 text-gray-700 rounded-md hover:bg-gray-100 transition-all duration-200">
+            Mark As Read
           </button>
           <button className="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-all duration-200">
-            Wishlist
+           Add To Wishlist
           </button>
         </div>
       </div>
